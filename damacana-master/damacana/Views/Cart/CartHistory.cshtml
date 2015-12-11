@@ -1,0 +1,30 @@
+﻿@using Damacana.Models
+@model IEnumerable<Damacana.Models.Purchase>
+
+<body style="background-image:url(http://www.islamekseni.com/sitebuildercontent/sitebuilderpictures/selaleresimleri6.jpg)">
+
+    <h3 style="color:antiquewhite">Purchases History</h3>
+
+    @foreach (Purchase p in Model)
+    {
+
+        <table style="width:30%">
+            <tr>
+                <td>
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="media-heading">Toplam Tutar: @p.TotalPrice TL</h4>
+                        <h4 class="media-heading">Purchase Id:  @p.Id</h4>
+                        <h4 class="media-heading">Ödeme Tarihi: @p.CreatedOn</h4>
+                   
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    }
+    <nav>
+        <ul class="pager">
+            <li><a href="@Url.Action("Index","Home")">Return to Product</a></li>
+        </ul>
+    </nav>
+</body>

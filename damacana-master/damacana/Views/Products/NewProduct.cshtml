@@ -1,0 +1,17 @@
+﻿@model Damacana.Models.Product
+<body style="background-image:url(http://www.islamekseni.com/sitebuildercontent/sitebuilderpictures/selaleresimleri6.jpg)">
+    <h2>İcluding New Product</h2>
+    @using (Html.BeginForm("SaveProduct", "Products", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label>Name</label>
+           @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+           @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-default">Ekle</button>
+    }
+</body>

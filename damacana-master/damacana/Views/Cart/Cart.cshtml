@@ -1,0 +1,25 @@
+﻿@using Damacana.Models
+@model Purchase
+<body style="background-image:url(http://www.islamekseni.com/sitebuildercontent/sitebuilderpictures/selaleresimleri6.jpg)">
+    <br />
+    <h3 style="color:white">Purchase Pay</h3>
+    <br />
+
+    <table style="width:30%">
+        <tr>
+            <td>
+                <div class="alert alert-success" role="alert">
+                    <h4 class="media-heading">Prix: @Model.TotalPrice TL</h4>
+                    <br />
+                    <a class="btn btn-info" href="@Url.Action("PurchaseDone", "Cart")"><b>Buy it!</b></a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <nav>
+        <ul class="pager">
+            <li><a href="@Url.Action("Index","Products")">Home</a></li>
+        </ul>
+
+    </nav>
+</body>
